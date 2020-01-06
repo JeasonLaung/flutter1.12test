@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:multi_image_picker/multi_image_picker.dart';
+// import 'package:permission_handler/permission_handler.dart';
 
 void main() => runApp(MyApp());
 
@@ -71,6 +72,7 @@ class _MyHomePageState extends State<MyHomePage> {
           RaisedButton(
             child: Text('选择图片'),
             onPressed: () async{
+              // PermissionHandler().requestPermissions([PermissionGroup.camera])
               resultList = await MultiImagePicker.pickImages(
                 maxImages: 9,
                 enableCamera: true,
